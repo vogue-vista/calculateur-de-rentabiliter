@@ -61,7 +61,7 @@ marge_brute = prix_vente - total_couts
 # Calcul du Point Mort (Break-Even ROAS)
 if marge_brute > 0:
     break_even_roas = prix_vente / marge_brute
-    cout_acquisition_max (cpa_max) = marge_brute
+    cpa_max = marge_brute
     
     # Évaluation de la situation actuelle
     chiffre_affaire_par_vente = prix_vente
@@ -115,7 +115,7 @@ else:
                 )
                 
                 # Affichage du résultat de l'IA
-                st.info(completion.choices[0].message.content)
+                st.info(completion.choices.message.content)
                 
             except Exception as e:
                 st.error(f"Erreur lors de la génération IA : {e}")
