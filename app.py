@@ -19,7 +19,7 @@ st.markdown("""
     }
     .metric-val { font-size: 24px; font-weight: bold; color: #38bdf8; }
     </style>
-""", unsafe_index=True)
+""", unsafe_allow_html=True)
 
 # Récupération sécurisée de la clé API Groq (Compatible Local et Streamlit Cloud)
 if "GROQ_API_KEY" in st.secrets:
@@ -77,11 +77,11 @@ st.subheader("📈 Votre Point Mort Analysé")
 
 m1, m2, m3 = st.columns(3)
 with m1:
-    st.markdown(f'<div class="metric-box"><div>Marge Brute</div><div class="metric-val">{marge_brute:.2f}$</div></div>', unsafe_index=True)
+    st.markdown(f'<div class="metric-box"><div>Marge Brute</div><div class="metric-val">{marge_brute:.2f}$</div></div>', unsafe_allow_html=True)
 with m2:
-    st.markdown(f'<div class="metric-box"><div>ROAS Point Mort</div><div class="metric-val">{break_even_roas:.2f}x</div></div>', unsafe_index=True)
+    st.markdown(f'<div class="metric-box"><div>ROAS Point Mort</div><div class="metric-val">{break_even_roas:.2f}x</div></div>', unsafe_allow_html=True)
 with m3:
-    st.markdown(f'<div class="metric-box"><div>Coût d\'Acquisition Max</div><div class="metric-val">{cpa_max:.2f}$</div></div>', unsafe_index=True)
+    st.markdown(f'<div class="metric-box"><div>Coût d\'Acquisition Max</div><div class="metric-val">{cpa_max:.2f}$</div></div>', unsafe_allow_html=True)
 
 # Bloc IA pour l'analyse stratégique
 st.subheader("🤖 Analyse Stratégique par l'IA")
